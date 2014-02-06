@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://dpac56.github.io/atom.xml" rel="self"/>
   <link href="http://dpac56.github.io/"/>
-  <updated>2014-02-06T13:54:27+05:30</updated>
+  <updated>2014-02-06T15:17:30+05:30</updated>
   <id>http://dpac56.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Creating a Github Blog Using Octopress]]></title>
+    <title type="html"><![CDATA[Day 1: Creating a Github Blog Using Octopress]]></title>
     <link href="http://dpac56.github.io/blog/2014/02/06/creating-a-github-blog-using-octopress/"/>
     <updated>2014-02-06T12:15:00+05:30</updated>
     <id>http://dpac56.github.io/blog/2014/02/06/creating-a-github-blog-using-octopress</id>
-    <content type="html"><![CDATA[<h1>First post on Octo</h1>
+    <content type="html"><![CDATA[<h1>Building an Octopress Blog on Github</h1>
 ]]></content>
   </entry>
   
