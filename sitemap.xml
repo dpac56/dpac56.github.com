@@ -1,21 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>
-            http://username.github.io/blog/2014/02/06/creating-a-github-blog-using-octopress/
-        </loc>
+        <loc>http://dpac56.github.io/blog/2014/02/06/creating-a-github-blog-using-octopress/</loc>
         <lastmod>2014-02-06T12:19:35+05:30</lastmod>
     </url>
     <url>
-        <loc>http://username.github.io/</loc>
+        <loc>http://dpac56.github.io/</loc>
         <lastmod>2014-02-06T12:19:35+05:30</lastmod>
     </url>
     <url>
-        <loc>http://username.github.io/robots.txt</loc>
+        <loc>http://dpac56.github.io/robots.txt</loc>
         <lastmod>2014-02-06T11:53:36+05:30</lastmod>
     </url>
     <url>
-        <loc>http://username.github.io/blog/archives/</loc>
+        <loc>http://dpac56.github.io/blog/archives/</loc>
         <lastmod>2014-02-06T12:19:35+05:30</lastmod>
     </url>
 </urlset>
