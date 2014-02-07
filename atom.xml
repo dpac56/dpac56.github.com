@@ -4,7 +4,7 @@
   <title><![CDATA[A tutorial a day]]></title>
   <link href="http://dpac56.github.io/atom.xml" rel="self"/>
   <link href="http://dpac56.github.io/"/>
-  <updated>2014-02-07T08:56:19+05:30</updated>
+  <updated>2014-02-07T09:57:43+05:30</updated>
   <id>http://dpac56.github.io/</id>
   <author>
     <name><![CDATA[Deepak]]></name>
@@ -14,17 +14,50 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Day 2: UX Crash Course]]></title>
+    <link href="http://dpac56.github.io/blog/2014/02/07/ux-crash-course/"/>
+    <updated>2014-02-07T09:21:00+05:30</updated>
+    <id>http://dpac56.github.io/blog/2014/02/07/ux-crash-course</id>
+    <content type="html"><![CDATA[<h3>A crash course on UX</h3>
+
+<p><em>I am always bookmarking interesting tutorials that I would do one fine day. Since that day never comes, I have aimed to do one tutorial each day. The topics would broadly be programming, design, marketing and productivity tips. All credit to the original tutorials &ndash; I am just thinking aloud as I type my notes &amp; views on what I read.</em></p>
+
+<p>Day 2: The UX Crash Course <a href="http://thehipperelement.com/post/75476711614/ux-crash-course-31-fundamentals">http://thehipperelement.com/post/75476711614/ux-crash-course-31-fundamentals</a></p>
+
+<h3>What is UX</h3>
+
+<p>A process to make users more effective in whatever their indivdiual goals are.</p>
+
+<h3>Goals</h3>
+
+<p>The core concept here is two pronged: First, find the user &amp; business goals and second, align those goals. It is fascinating that this crash course starts with this point, because I have been part of teams where websites/applications were developed in an environment of zero possibility of this happening. Designers/developers had minimum access to top management to understand the goals (well apart from knowing what the business does) and had no interaction with end users.</p>
+
+<p>Unfortunately, in most practical cases there are plenty of restrictions (time, money, resources) that relegate UX to UI and UI to only following the current best practises.</p>
+
+<p>Either way &ndash; there is no denying that designing experiences without understanding stakeholders is not the best way.</p>
+
+<h3>Ingredients of UX</h3>
+
+<p>Okay so this section is very nicely done &ndash; lots of questions that you should bookmark <a href="http://thehipperelement.com/post/72080847673/daily-ux-crash-course-3-of-31">http://thehipperelement.com/post/72080847673/daily-ux-crash-course-3-of-31</a> . Irrespective of whether you have a full team working or running a single person shop, I guess asking these questions at various stages of progress can only make things better.</p>
+
+<p>The 5 ingredients listed are Pyschology (get into the mind of users, their goals &amp; motivations), Usability (visualize the actions of users, how they use your design), Design (estimate the impressions your design makes on users), Copywriting (Are you using generic text or everything is optimized) and Analysis (Measure, measure, measure)</p>
+
+<p>Couple of points here &ndash; a good UX designer would be exceptionally good in getting into the mind of users. Obviously, there is only a degree to which this is possible. But, if you can track what made the user come to your site, what did he want and how did he go about searching for it &ndash; your designs would start aligning the goals.</p>
+
+<p>The other interesting point is something that is quite new to me &ndash; the copywriting used by the UX designer. I suspect a vast majority of time is spent on visual design and text is treated as commoditized work.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Day 1: Creating an Octopress Blog on Github]]></title>
     <link href="http://dpac56.github.io/blog/2014/02/06/creating-a-github-blog-using-octopress/"/>
     <updated>2014-02-06T12:15:00+05:30</updated>
     <id>http://dpac56.github.io/blog/2014/02/06/creating-a-github-blog-using-octopress</id>
     <content type="html"><![CDATA[<h3>Building an Octopress Blog on Github</h3>
 
-<p><em>I am always bookmarking interesting tutorials that I would do one fine day. Since that day never comes, I have aimed to do one tutorial each day. The topics would broadly be programming, marketing and productivity hacks. All credit to the original tutorial &ndash; I am just thinking aloud as I type my notes.</em></p>
+<p><em>I am always bookmarking interesting tutorials that I would do one fine day. Since that day never comes, I have aimed to do one tutorial each day. The topics would broadly be programming, design, marketing and productivity tips. All credit to the original tutorials &ndash; I am just thinking aloud as I type my notes.</em></p>
 
 <p>Day 1: Getting started with Octopress <a href="http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/">http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/</a></p>
-
-<p>I am using Ubuntu 12.04 &ndash; the tips might or might not be applicable to you.</p>
 
 <p>Octopress is a static blogging framework that calls itself “A blogging framework for hackers”. The tutorial at tutsplus (<a href="http://dev.tutsplus.com/tutorials/getting-started-with-octopress--webdesign-11442">http://dev.tutsplus.com/tutorials/getting-started-with-octopress&#8211;webdesign-11442</a>) does a good job of explaining what is the difference between such a static framework and something like Wordpress that needs to ‘do’ something on the server before becoming viewable.</p>
 
@@ -102,6 +135,12 @@ rake deploy
 <li>The posts in Octopress are in Markdown format &ndash; it is pretty easy to learn &amp; is bare bones. This is where you can take a look <a href="http://daringfireball.net/projects/markdown/syntax#list">http://daringfireball.net/projects/markdown/syntax#list</a></li>
 </ol>
 
+
+<p>These links might also help in your specific problems:</p>
+
+<p><a href="http://stackoverflow.com/questions/12060903/github-error-repository-not-found-when-installing-octopress">http://stackoverflow.com/questions/12060903/github-error-repository-not-found-when-installing-octopress</a></p>
+
+<p><a href="http://stackoverflow.com/questions/11240797/git-commit-error-repository-invalid">http://stackoverflow.com/questions/11240797/git-commit-error-repository-invalid</a></p>
 ]]></content>
   </entry>
   
