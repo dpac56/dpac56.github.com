@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Day 1: Creating a Github Blog Using Octopress - A tutorial a day</title>
+  <title>Day 1: Creating an Octopress Blog on Github - A tutorial a day</title>
   <meta name="author" content="Deepak">
 
   
-  <meta name="description" content="Building an Octopress Blog on Github
-">
+  <meta name="description" content="Building an Octopress Blog on Github I am always bookmarking interesting tutorials that I would do one fine day. Since that day never comes, I have &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">Day 1: Creating a Github Blog Using Octopress</h1>
+      <h1 class="entry-title">Day 1: Creating an Octopress Blog on Github</h1>
     
     
       <p class="meta">
@@ -93,6 +92,89 @@
 
 
 <div class="entry-content"><h3>Building an Octopress Blog on Github</h3>
+
+<p><em>I am always bookmarking interesting tutorials that I would do one fine day. Since that day never comes, I have aimed to do one tutorial each day. The topics would broadly be programming, marketing and productivity hacks. All credit to the original tutorial &ndash; I am just thinking aloud as I type my notes.</em></p>
+
+<p>Day 1: Getting started with Octopress <a href="http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/">http://www.tomordonez.com/blog/2012/06/04/creating-a-github-blog-using-octopress/</a></p>
+
+<p>I am using Ubuntu 12.04 &ndash; the tips might or might not be applicable to you.</p>
+
+<p>Octopress is a static blogging framework that calls itself “A blogging framework for hackers”. The tutorial at tutsplus (<a href="http://dev.tutsplus.com/tutorials/getting-started-with-octopress--webdesign-11442">http://dev.tutsplus.com/tutorials/getting-started-with-octopress&#8211;webdesign-11442</a>) does a good job of explaining what is the difference between such a static framework and something like Wordpress that needs to ‘do’ something on the server before becoming viewable.</p>
+
+<p>Octopress in itself is pretty famous and used by a lot of programmers. I was a bit wary that the Octopress site hasn’t been updated for a few years and toyed with the idea of trying out Pelican &ndash; that does almost the same thing but is Python based. Maybe, will do that later.</p>
+
+<p>You would need Ruby version 1.9.3 or above for this to work. And since my machine didn’t have that I had to use the Ruby Version Manager (rvm).</p>
+
+<p>As soon as I put in the first command of the tutorial, out popped a message that rvm on Ubuntu is unusable. Good thing though that the link given pointed to a Stackoverflow answer that worked perfectly.</p>
+
+<p>You had to remove the rvm completely and reinstall as per these instructions.</p>
+
+<p>Follow the instructions, and finally when it all ends run the command ruby &mdash;version. It should output to the latest one. I now have 2.1.0</p>
+
+<p>With Ruby you also need RubyGems &ndash; a package management framework for Ruby. Broadly, the programs/libraries/codes in Ruby are in a self contained format called a gem. With RubyGems you can install any of these open source packages directly from the command line.</p>
+
+<p>The commands to install Octopress are pretty simple.</p>
+
+<p>Go to a convenient folder and clone the main repo</p>
+
+<pre><code>git clone git://github.com/imathis/octopress.git octopress
+cd octopress
+rake install
+</code></pre>
+
+<p>At this stage, you are actually ready to see your blog locally with the following</p>
+
+<pre><code>rake preview
+</code></pre>
+
+<p>Go to localhost:4000 in your browser &amp; you should see the default theme</p>
+
+<p><em>The deploying to github part is also straightforward but gave me a lot of headache.</em></p>
+
+<p>This is what you need to do. Create a new github repository with name as username.github.com</p>
+
+<p>Run</p>
+
+<pre><code>rake setup_github_pages
+</code></pre>
+
+<p>You will need to enter the repository URL in the terminal when prompted. The suggested format is</p>
+
+<pre><code>git@github.com:username/username.github.com.git
+</code></pre>
+
+<p>However, entering this format (&amp; after completing the process) I could not deploy on github and kept getting an invalid repository/check access rights error. Finally, I tried entering in this format</p>
+
+<pre><code>git@github.com:username/username.github.com
+</code></pre>
+
+<p>And everything worked &ndash; so if you are having some troubles, try checking with the second option as well.</p>
+
+<p>Pushing to github:</p>
+
+<pre><code>rake generate
+git add .
+git commit -am "Message"
+git push origin source
+rake deploy
+</code></pre>
+
+<p>That should be it and your blog should be viewable on username.github.com (or .io) in some minutes.</p>
+
+<p>Everytime you create a new post</p>
+
+<pre><code>rake new_post ["My first post"]
+</code></pre>
+
+<p>they will be stored in the octopress/source/_posts folder and after each modification you can run the above set of git commands to see the changes.</p>
+
+<p>A couple of points:</p>
+
+<ol>
+<li>If you are still having trouble, check that the default branch of your github repo is &lsquo;master&rsquo; and not &lsquo;source&rsquo;</li>
+<li>The posts in Octopress are in Markdown format &ndash; it is pretty easy to learn &amp; is bare bones. This is where you can take a look <a href="http://daringfireball.net/projects/markdown/syntax#list">http://daringfireball.net/projects/markdown/syntax#list</a></li>
+</ol>
+
 </div>
 
 
@@ -146,7 +228,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/02/06/creating-a-github-blog-using-octopress/">Day 1: Creating a Github Blog Using Octopress</a>
+        <a href="/blog/2014/02/06/creating-a-github-blog-using-octopress/">Day 1: Creating an Octopress Blog on Github</a>
       </li>
     
   </ul>
