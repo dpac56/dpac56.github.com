@@ -4,7 +4,7 @@
   <title><![CDATA[A tutorial a day]]></title>
   <link href="http://dpac56.github.io/atom.xml" rel="self"/>
   <link href="http://dpac56.github.io/"/>
-  <updated>2014-02-07T09:57:43+05:30</updated>
+  <updated>2014-02-08T10:30:07+05:30</updated>
   <id>http://dpac56.github.io/</id>
   <author>
     <name><![CDATA[Deepak]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Day 3: UX Crash Course Contd..]]></title>
+    <link href="http://dpac56.github.io/blog/2014/02/08/day-2-ux-crash-course-contd-dot/"/>
+    <updated>2014-02-08T09:12:29+05:30</updated>
+    <id>http://dpac56.github.io/blog/2014/02/08/day-2-ux-crash-course-contd-dot</id>
+    <content type="html"><![CDATA[<p><em>I am always bookmarking interesting tutorials that I would do one fine day. Since that day never comes, I have aimed to do one tutorial each day. The topics would broadly be programming, design, marketing and productivity tips. All credit to the original tutorials &ndash; I am just thinking aloud as I type my notes &amp; views on what I read.</em></p>
+
+<p>Day 3: The UX Crash Course <a href="http://thehipperelement.com/post/75476711614/ux-crash-course-31-fundamentals">http://thehipperelement.com/post/75476711614/ux-crash-course-31-fundamentals</a></p>
+
+<h3>User Research</h3>
+
+<p>Do it often, do it in various stages. Everyone agrees that user research is important, it is how to do it where people falter.</p>
+
+<h4>Subjective Research:</h4>
+
+<p>These are questions more based on opinion and impressions. &ldquo;Do you trust this brand, were you happy with the search process&rdquo;. There is no way to prove them to be right or wrong but the larger the sample size &ndash; the closer to the effective answer you would be. [The most effective answer may or may not be the correct one!]</p>
+
+<h4>Objective Research:</h4>
+
+<p>These are hard facts that you might have seen in something like Google Analytics &ndash; Traffic, time spent on a page, bounce rate etc. There is no disputing what you see here.</p>
+
+<h3>How to ask questions</h3>
+
+<p>To me, this is perhaps the most important part of UX design &amp; the tutorial is a bit thin here. For anyone interested Coursera&rsquo;s Human Computer Interaction course is phenomenal in teaching these concepts.</p>
+
+<p>Broadly: Be wary that the questions you ask determine the answers you get. Leading questions that already assume something are a bad bad thing &ldquo;Which part of the process did you enjoy most&rdquo;. Open questions &ldquo;What type of car do you want&rdquo; might give a lot of information that would be diffiucult to analyze. Closed questions are a good option if the choices presented are intelligent.</p>
+
+<p>And you can Interview people, observe them in process, ask them to tabulate their experiences while doing something, do focus groups etc.</p>
+
+<h3>User Profiles</h3>
+
+<p>This was a very nice snippet. Similar to copywriting &ndash; a copy for sales is not equal to copy for UX; a good persona for sales may not be a good one for UX.</p>
+
+<p>The major point here is that once you develop a persona &ndash; you should be able to take a look and get something actionable out of it. How does the persona affect your UX design &ndash; if you are not getting any specific &ldquo;Do this not that&rdquo; out, then the user profile is a bad one.</p>
+
+<p>I have seen people advocate building one ideal user profile and customizing the whole experience for that one person. There are also those who want to build several profiles and offer something to each one &ndash; so take your pick!</p>
+
+<h3>Device consideration</h3>
+
+<p>Obviously, the day of building only for laptops is past. Keep in mind the different devices from which content will be consumed. At a minimal level &ndash; keep the design responsive.</p>
+
+<p>Honestly, this section is too big &amp; too rapidly changing to have been adequately covered in a page.</p>
+
+<h3>Design Patterns</h3>
+
+<p>Use design patterns that have proven to be good. Do not reinvent the wheel but also do not confuse a common design pattern to always be a good design pattern.</p>
+
+<p>Really liked the mention of Facebook Hamburger button (didn&rsquo;t know that is what it was called) but yes, am seeing many website employing the same without any need to do so.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Day 2: UX Crash Course]]></title>
