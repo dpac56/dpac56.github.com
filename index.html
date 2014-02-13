@@ -72,6 +72,186 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/02/12/introduction-to-flask/">Day 7: Introduction to Flask</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-12T11:04:47+05:30" pubdate data-updated="true">Feb 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>I am always bookmarking interesting tutorials that I would do one fine day. Since that day never comes, I have aimed to do one tutorial each day. The topics would broadly be programming, design, marketing and productivity tips. All credit to the original tutorials &ndash; I am just thinking aloud as I type my notes &amp; views on what I read.</em></p>
+
+<p>Day 7: Introduction to Flask <a href="http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822">http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework&#8211;net-28822</a></p>
+
+<p>Flask is one of the more popular web frameworks in Python.</p>
+
+<p>What is a web framework? A web framework is a software framework that helps in development of dynamic websites/applications by performing the common tasks associated in web development so that you do not have to write them again.</p>
+
+<p>Flask is a micro-framework written in Python ideally designed for smaller applications.</p>
+
+<p>***Installing virtualenv</p>
+
+<p>Invariably, almost every Python tutorial will start by installing virtualenv. This is a very useful tool that creates an isloated environment for your project. Why? Because in all probability you would need various dependencies/libraries in various versions for each project. If you do a system wide installation of these libraries and something changes &ndash; every project will be affected which you don&rsquo;t want.</p>
+
+<pre><code>virtualenv --version
+</code></pre>
+
+<p>If the above command does not return anything, then you have to install through</p>
+
+<pre><code>sudo pip install virtualenv
+</code></pre>
+
+<p>or</p>
+
+<pre><code>sudo apt-get install python-virtualenv
+</code></pre>
+
+<h3>Installing Flask</h3>
+
+<p>I have seen various ways of using virtualenv, but these seems the most convenient. Use virtualenv to make the main project folder</p>
+
+<pre><code>virtualenv flaskapp
+</code></pre>
+
+<p>Now you have a folder which can be used as an isolated environment. Don&rsquo;t forget to activate virtualenv</p>
+
+<pre><code>cd flaskapp
+. bin/activate
+</code></pre>
+
+<p>Install Flask</p>
+
+<pre><code>pip install Flask
+</code></pre>
+
+<h3>Project directory structure</h3>
+
+<p>This tutorial actually did a much better job of easing into showing a directory structure.</p>
+
+<p>Inside flaskapp/ make a folder app/ that will create all your files.</p>
+
+<p>app/static/ will have your css, js, img
+app/static/templates/ will have the web templates
+app/routes.py will be the main python file that will contain the logic
+app/README.md will be the normal description file.</p>
+
+<h3>Using templates</h3>
+
+<p>You don&rsquo;t want to repeat the HTML boilerplate code everytime so web templates come in handy in defining a parent template and then other inheriting most things from that + adding something of their own.</p>
+
+<p>In your app/templates/ folder create a layout.html file with the below code.</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Flask App&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+        &lt;header&gt;
+            &lt;div class="container"&gt;
+                &lt;h1 class="logo"&gt;Flask App&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;div class="container"&gt;
+            {block content}
+            {endblock}
+
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<blockquote><p>Having troubles with Jekyll tags so code samples here will be without the &lsquo;%&rsquo; sign &ndash; ADD THEM IN THE PROGRAMS</p></blockquote>
+
+<p>Either way this is a base layout that has a block tag in the second container class.</p>
+
+<pre><code>{extends "layout.html"}
+{block content}
+&lt;div class = "jumbo"&gt;
+    &lt;h2&gt; Welcome to the Flask app &lt;/h2&gt;
+    &lt;h3&gt; This is the home page for Flask app &lt;/h3&gt;
+&lt;div&gt;
+{endblock}
+</code></pre>
+
+<p>If we create a home.html file as above &ndash; that can simply extend the layout. html file and insert its own code block in between.</p>
+
+<p>So now the templates can be rendered. In a simple app like this the application logic only extends to routing to the correct page. The below is a standard Flask template in routes.py.</p>
+
+<pre><code>from flask import Flask, render_template
+
+app = Flask(__name__)      
+
+@app.route('/')
+def home():
+ return render_template('home.html')
+
+if __name__ == '__main__':
+ app.run(debug=True)
+</code></pre>
+
+<p> We imported two functions Flask and render_template</p>
+
+<p> Created a new instance of the Flask class</p>
+
+<p> Defined what the program should do if the request is for the &lsquo;/&rsquo; page.</p>
+
+<p> Okay, now cd into the app folder (make sure the virtualenv is activated) and run routes.py</p>
+
+<p> You should be able to see a working web page on local host.</p>
+
+<p> You could now add some styling to the page by adding a main.css file in the static folder. The only think to note here is how you add the link to the layout.html file head</p>
+
+<pre><code>&lt;link rel="stylesheet" href=""&gt;;
+</code></pre>
+
+<p>Creating another page (about.html) follows the same process. Add a template in the templates folder and add the correct routing to the routes.py file</p>
+
+<p>Okay so the only thing left here is to add some navigation to the home page. We will add the following to the layout.html file header</p>
+
+<pre><code>&lt;strong&gt;&lt;nav&gt;
+    &lt;ul class="menu"&gt;
+        &lt;li&gt;&lt;a href = ""&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href = ""&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/strong&gt;
+</code></pre>
+
+<p>Well that is about that. We have a siimple working Flask website here that routes and introduces templates.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/02/11/day-6-ux-crash-course-contd-dot/">Day 6: UX Crash Course Contd..</a></h1>
     
     
@@ -587,6 +767,10 @@ rake deploy
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/02/12/introduction-to-flask/">Day 7: Introduction to Flask</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/11/day-6-ux-crash-course-contd-dot/">Day 6: UX Crash Course Contd..</a>
       </li>
     
@@ -600,10 +784,6 @@ rake deploy
     
       <li class="post">
         <a href="/blog/2014/02/08/day-2-ux-crash-course-contd-dot/">Day 3: UX Crash Course Contd..</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/07/ux-crash-course/">Day 2: UX Crash Course</a>
       </li>
     
   </ul>

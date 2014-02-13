@@ -25,8 +25,12 @@
         <lastmod>2014-02-11T18:04:41+05:30</lastmod>
     </url>
     <url>
+        <loc>http://dpac56.github.io/blog/2014/02/12/introduction-to-flask/</loc>
+        <lastmod>2014-02-13T12:06:15+05:30</lastmod>
+    </url>
+    <url>
         <loc>http://dpac56.github.io/</loc>
-        <lastmod>2014-02-11T18:04:41+05:30</lastmod>
+        <lastmod>2014-02-13T12:06:15+05:30</lastmod>
     </url>
     <url>
         <loc>http://dpac56.github.io/robots.txt</loc>
@@ -38,6 +42,6 @@
     </url>
     <url>
         <loc>http://dpac56.github.io/blog/archives/</loc>
-        <lastmod>2014-02-11T18:04:41+05:30</lastmod>
+        <lastmod>2014-02-13T12:06:15+05:30</lastmod>
     </url>
 </urlset>
