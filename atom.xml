@@ -4,7 +4,7 @@
   <title><![CDATA[A tutorial a day]]></title>
   <link href="http://dpac56.github.io/atom.xml" rel="self"/>
   <link href="http://dpac56.github.io/"/>
-  <updated>2014-02-13T12:07:08+05:30</updated>
+  <updated>2014-02-15T14:52:55+05:30</updated>
   <id>http://dpac56.github.io/</id>
   <author>
     <name><![CDATA[Deepak]]></name>
@@ -12,6 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Day 8: Random Blog With Poole]]></title>
+    <link href="http://dpac56.github.io/blog/2014/02/13/day-8-bootstrap-3/"/>
+    <updated>2014-02-13T15:48:42+05:30</updated>
+    <id>http://dpac56.github.io/blog/2014/02/13/day-8-bootstrap-3</id>
+    <content type="html"><![CDATA[<p><em>I am always bookmarking interesting tutorials that I would do one fine day. Since that day never comes, I have aimed to do one tutorial each day. The topics would broadly be programming, design, marketing and productivity tips. All credit to the original tutorials &ndash; I am just thinking aloud as I type my notes &amp; views on what I read.</em></p>
+
+<p>Day 8: Random Blog with Poole <a href="http://hyde.getpoole.com/">http://hyde.getpoole.com/</a></p>
+
+<p>Was going to do something else but came across a new blog based on Jekyll called Poole.</p>
+
+<p>Setting up is pretty easy.</p>
+
+<p>Install Jekyll. and clone into the repo</p>
+
+<pre><code>jekyll serve
+</code></pre>
+
+<p>And you should be ready</p>
+
+<p>I tried putting this on Github gh-pages, which for some reason always give me a problem</p>
+
+<p>Create a new repo on github &amp; get the repo link</p>
+
+<pre><code>git init
+git remote add origin &lt;Link&gt;
+</code></pre>
+
+<p>In this case, you might first have to remove the existing origin by</p>
+
+<pre><code>git remote rm origin
+</code></pre>
+
+<p>Check your origin</p>
+
+<pre><code>git remote -v
+</code></pre>
+
+<p>and go back to adding origin</p>
+
+<pre><code>git remote add origin &lt;link&gt;
+git add .
+git commit -m "message"
+git push origin master
+</code></pre>
+
+<p>For a website to get hosted on gh-pages you have to create a new branch called gh-pages and make it the default one (through settings)</p>
+
+<pre><code>git push origin gh-pages 
+</code></pre>
+
+<p>I did get a couple of errors</p>
+
+<p>error: pathspec &lsquo;…&rsquo; did not match any file(s) known to git &mdash;> Try doing</p>
+
+<pre><code>git fetch
+</code></pre>
+
+<p>CNAME already taken &mdash;> Try removing the CNAME file from the repo</p>
+
+<p>Well, the blog is now hosted on gh-pages but the stylesheet is not working. Over for another day &ndash; I guess</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Day 7: Introduction to Flask]]></title>
