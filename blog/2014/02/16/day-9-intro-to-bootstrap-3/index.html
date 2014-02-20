@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Day 5: UX Crash Course Contd.. - A tutorial a day</title>
+  <title>Day 9: Intro to Bootstrap 3 - A tutorial a day</title>
   <meta name="author" content="Deepak">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dpac56.github.io/blog/2014/02/10/day-5-ux-crash-course-contd-dot">
+  <link rel="canonical" href="http://dpac56.github.io/blog/2014/02/16/day-9-intro-to-bootstrap-3">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="A tutorial a day" type="application/atom+xml">
@@ -69,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">Day 5: UX Crash Course Contd..</h1>
+      <h1 class="entry-title">Day 9: Intro to Bootstrap 3</h1>
     
     
       <p class="meta">
@@ -85,7 +85,7 @@
   
 
 
-<time datetime="2014-02-10T16:39:23+05:30" pubdate data-updated="true">Feb 10<span>th</span>, 2014</time>
+<time datetime="2014-02-16T20:44:48+05:30" pubdate data-updated="true">Feb 16<span>th</span>, 2014</time>
         
       </p>
     
@@ -94,29 +94,55 @@
 
 <div class="entry-content"><p><em>I am always bookmarking interesting tutorials that I would do one fine day. Since that day never comes, I have aimed to do one tutorial each day. The topics would broadly be programming, design, marketing and productivity tips. All credit to the original tutorials &ndash; I am just thinking aloud as I type my notes &amp; views on what I read.</em></p>
 
-<p>Day 5: The UX Crash Course <a href="http://thehipperelement.com/post/75476711614/ux-crash-course-31-fundamentals">http://thehipperelement.com/post/75476711614/ux-crash-course-31-fundamentals</a></p>
+<p>Day 9: Code a responsive website with Bootstrap 3 <a href="http://www.youtube.com/watch?v=JzCmx24xDS4&amp;list=PLUoqTnNH-2Xz_BUrjcahKWDhPcUj-FTOt">http://www.youtube.com/watch?v=JzCmx24xDS4&amp;list=PLUoqTnNH-2Xz_BUrjcahKWDhPcUj-FTOt</a></p>
 
-<h3>Visual weight, contrast &amp; depth</h3>
+<p>Twitter Bootstrap has been the favorite for developers to design a website quickly. While it will need susbtantial skills to actually build a super-personalized website from Bootstrap &ndash; there is no denying that for building fast, workable websites Bootstrap is one of the best.</p>
 
-<p>The premise is that we should aid users in noticing &amp; discovering the important parts and restrain them from being distracted by the not so important ones.</p>
+<p>Last year Bootstrap 3 was released that comes with the tagline &ndash; Mobile First. What that means is that while earlier large screens were the default and you had to work to make things workable on smaller screens &ndash; now it is the other way round. This playlist looked like a good way to try out the new features.</p>
 
-<p>The more important things should have higher contrast: If the background is light they should be the darkest (&amp; vice-versa). They should also be bigger.</p>
+<p>Just to recap as to why someone would choose Bootstrap framework rather than building one from scratch:</p>
 
-<h3>Color</h3>
+<p>1) Bootstrap is responsive by default &ndash; you don&rsquo;t have to do much to make it work across different devices</p>
 
-<p>This may be infringing on a UI designer&rsquo;s task but sometimes colors have intuitive meaning that serve some UX function. You might want to experiment with colors &ndash; though if that is not within your skills, leave that for the UI people.</p>
+<p>2) Bootstrap is tested to work across browsers</p>
 
-<h3>Repetition &amp; Pattern Breaking</h3>
+<p>3) Once you get the hang of it &ndash; it is incredibly fast to build a website since Bootstrap takes care of all the boilerplate code.</p>
 
-<p>Focus is shifted towards where a pattern is broken. The brain treats a repetition as a single set but automatically treats a change as a new element.</p>
+<p>You can download the course files (link in Video 2) for reference.</p>
 
-<h3>Line tension &amp; Egde tension</h3>
+<h3>Okay so lets start coding..</h3>
 
-<p>A bit tricky one this &ndash; didn&rsquo;t fully get the concept.</p>
+<p>We will be working on index.html first that is as always going to be the main sheet.</p>
 
-<h3>Alignment &amp; Proximity</h3>
+<p>While there is a layout provided, taking a look at the head section, we have:</p>
 
-<p>A basic but powerful concept. The closer objects are, the more likely they will be treated as belonging together. Alignment can create seperate groups in our mind as well.</p>
+<p>viewport meta tag: Viewport is the section of the webpage in view. When we put width = device-width we are telling the browser what is the best way to view the webpage. With device-width set we are allowing for responsive design by filling the page to the device width. To ensure that no zooming will be applied, we put the initial-scale = 1. We take a further step by saying that even if the user wanted, there can be no zooming by putting maximum-scale = 1. While this might seem restrictive, it ensures that webpages act more like native applications.</p>
+
+<p>Apart from that, we just have the normla Bootstrap files + modernizr (takes care of older browsers that do not support modern function)</p>
+
+<p>The main body is wrapped in a container class. This is a very important class that makes the inner content boxed centrally. While the navigation is given class of navbar (tells Bootstrap this is navigation element) &amp; navbar-fixed-top (this is how the navigation remains on top while we scroll down)</p>
+
+<h3>One more thing &ndash; I have a bad habit of not commenting basic stuff &amp; the author&rsquo;s style here shows why it is effective. He ends each div with a comment so that you know what is what!</h3>
+
+<p>Add a carousel element below the navbar &amp; give it the class &ldquo;carousel slide&rdquo;. As implied by the name, makes it a slidable carousel.</p>
+
+<p>Remember, the row element is needed to contain the columns (total 12) &ndash; so we add plenty of row element, obviously depending on how many we need :&ndash;).</p>
+
+<p>Outside the container element, we add a footer.</p>
+
+<h3>Couple of things</h3>
+
+<p>footer is put outside the container class since we do not want it to be boxed centrally &ndash; instead want it to stretch full width.</p>
+
+<h3>Navigation</h3>
+
+<p>navbar is also stretched full width inspite of being in the container class since we have given it the fixed-top class.</p>
+
+<p>However, inside the navbar we will put a div with container class since we do not want the text within the navbar to spread full width.</p>
+
+<p>First thing we will put is a link with the class navbar-brand &ndash; this is meant to be your logo.</p>
+
+<p>Next to this we will start adding the navigation content.</p>
 </div>
 
 
@@ -139,7 +165,7 @@
   
 
 
-<time datetime="2014-02-10T16:39:23+05:30" pubdate data-updated="true">Feb 10<span>th</span>, 2014</time>
+<time datetime="2014-02-16T20:44:48+05:30" pubdate data-updated="true">Feb 16<span>th</span>, 2014</time>
       
 
 
@@ -147,7 +173,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dpac56.github.io/blog/2014/02/10/day-5-ux-crash-course-contd-dot/" data-via="withstartups" data-counturl="http://dpac56.github.io/blog/2014/02/10/day-5-ux-crash-course-contd-dot/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dpac56.github.io/blog/2014/02/16/day-9-intro-to-bootstrap-3/" data-via="withstartups" data-counturl="http://dpac56.github.io/blog/2014/02/16/day-9-intro-to-bootstrap-3/" >Tweet</a>
   
   
   
@@ -156,10 +182,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/02/09/day-4-optimizing-productivity/" title="Previous Post: Day 4: UX Crash Course contd..">&laquo; Day 4: UX Crash Course contd..</a>
+        <a class="basic-alignment left" href="/blog/2014/02/13/day-8-poole-blog-3/" title="Previous Post: Day 8: Random blog with Poole">&laquo; Day 8: Random blog with Poole</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/02/11/day-6-ux-crash-course-contd-dot/" title="Next Post: Day 6: UX Crash Course contd..">Day 6: UX Crash Course contd.. &raquo;</a>
       
     </p>
   </footer>
